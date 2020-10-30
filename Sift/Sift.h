@@ -30,6 +30,8 @@
 /** @return the shared instance of Sift. */
 + (instancetype)sharedInstance;
 
+- (instancetype)init;
+
 @property (readonly) NSString *sdkVersion;
 
 /** @return YES if the queue exists. */

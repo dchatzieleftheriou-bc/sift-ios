@@ -52,6 +52,11 @@ static const SiftQueueConfig SFDefaultEventQueueConfig = {
     return instance;
 }
 
+-(instancetype)init {
+    self = [self initWithRootDirPath:[SFCacheDirPath() stringByAppendingFormat:SFRootDirName]];
+    return self;
+}
+
 - (instancetype)initWithRootDirPath:(NSString *)rootDirPath {
     self = [super init];
     if (self) {
